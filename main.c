@@ -2,16 +2,16 @@
 
 int main(void)
 {
-    int total_seconds;
-    int minute;
-    int second;
+    int year;
+    int result;
 
-    printf("input the seconds : ");
-    scanf("%d",&total_seconds);
+    printf("input the year : ");
+    scanf("%d", &year);
 
-    minute= total_seconds/60;
-    second= total_seconds%60;
+    result = (year % 4 == 0 && year % 100 != 0)
+             || (year % 400 == 0);
 
-    printf("the time is %d:%d\n", minute, second);
+    printf("The result is : %d\n", result);
+
     return 0;
 }
